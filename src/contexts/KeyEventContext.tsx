@@ -1,20 +1,20 @@
 import { createContext, useContext, useState } from 'react';
+import { Keybord } from '../types/type';
 
-type Key = {
-  index: number,
-  maxIndex: number|undefined,
-  setIndex: (a: number) => void,
-  setMaxIndex: (a: number|undefined) => void,
-}
-
-const KeyEventContext = createContext<Key | null>(null);
+const KeyEventContext = createContext<Keybord | null>(null);
 
 export function KeyEventProvider({ children }: { children: React.ReactNode }) {
   const [index, setIndex] = useState(0);
-  const [maxIndex, setMaxIndex] = useState<number|undefined>(-1);
+  const [maxIndex, setMaxIndex] = useState<number | undefined>(-1);
+  
+  const [isKeyboardOn, setIsKeyboardOn] = useState(false);
+  const [recoKeyword, setRecoKeyword] = useState('');
 
   return (
-    <KeyEventContext.Provider value={{ index, maxIndex, setIndex, setMaxIndex }}>
+    <KeyEventContext.Provider value={{
+      index, maxIndex, setIndex, setMaxIndex,
+      isKeyboardOn, recoKeyword, setIsKeyboardOn, setRecoKeyword
+    }}>
       {children}
     </KeyEventContext.Provider>
   )

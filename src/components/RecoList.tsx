@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useKeyEvent } from '../contexts/KeyEventContext';
 import { RLProps } from '../types/type';
 
-export default function RecoList({ data: {sickCd, sickNm}, keyword, isFocus, setKeyword } : RLProps) {
+export default function RecoList({ data: { sickNm }, keyword, isFocus, setKeyword }: RLProps) {
+  const { setRecoKeyword, index } = useKeyEvent();
+  
+  useEffect(() => {
+    if (isFocus) setRecoKeyword(sickNm);
+  }, [index])
+
   return sickNm.includes(keyword) ? (
     <li
       onClick={() => setKeyword(sickNm)}

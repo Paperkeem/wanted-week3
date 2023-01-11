@@ -26,3 +26,14 @@ export type Data = {
 export type Datas = {
   sickData: Data[],
 }
+
+export type Keybord = {
+  index: number,
+  maxIndex: number | undefined,
+  isKeyboardOn: boolean,
+  recoKeyword: string,
+  setIndex: (a: number) => void,
+  setMaxIndex: (a: number | undefined) => void,
+  setIsKeyboardOn: (a: boolean) => void,
+  setRecoKeyword: (a: string) => void,
+}
