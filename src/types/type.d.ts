@@ -14,6 +14,7 @@ export type RProps = {
 export type RLProps = {
   data: Data,
   keyword: string,
+  isFocus: boolean,
   setKeyword: (a: string) => void
 }
 

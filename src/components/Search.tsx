@@ -1,7 +1,34 @@
 import React from 'react';
+import { useKeyEvent } from '../contexts/KeyEventContext';
 import { SProps } from '../types/type.d'
 
-export default function Search({ keyword, handleChange ,handleFocus }: SProps) {
+const ArrowDown = "ArrowDown";
+const ArrowUp = "ArrowUp";
+const Escape = "Escape";
+
+export default function Search({ keyword, handleChange, handleFocus }: SProps) {
+  const { setIndex, index, maxIndex } = useKeyEvent();  
+  console.log(index);
+  
+  const handleKeyArrow = (e: React.KeyboardEvent) => {
+      switch (e.key) {
+        case ArrowDown: //키보드 아래 키
+          // setIndex(index + 1);
+          setIndex(index + 1);
+          if (maxIndex === index + 1) setIndex(0);
+          break;
+        case ArrowUp: //키보드 위에 키
+          setIndex(index - 1);
+          if (index <= 0) {
+            setIndex(0);
+          }
+          break;
+        case Escape: // esc key를 눌렀을때,
+          // setKeyItems([]);
+          setIndex(0);
+          break;
+      }  
+  }
 
   return (
     <section>
@@ -11,6 +38,7 @@ export default function Search({ keyword, handleChange ,handleFocus }: SProps) {
           className='basis-10/12 text-3xl p-5 px-5 rounded-l-full'
           onChange={handleChange}
           onFocus={handleFocus}
+          onKeyDown={handleKeyArrow}
           value={keyword || ''} />
         <button
           className='p-3 basis-2/12 text-center bg-blue-700 hover:bg-blue-900 
