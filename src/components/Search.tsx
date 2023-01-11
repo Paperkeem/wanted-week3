@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {EventFunc, SProps} from '../types/type.d'
+import React from 'react';
+import { SProps } from '../types/type.d'
 
 export default function Search({ keyword, handleChange ,handleFocus }: SProps) {
 

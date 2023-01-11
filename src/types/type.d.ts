@@ -6,6 +6,17 @@ export type SProps = {
   handleFocus?: () => void,
 }
 
+export type RProps = {
+  keyword: string,
+  setKeyword: (a: string) => void
+}
+
+export type RLProps = {
+  data: Data,
+  keyword: string,
+  setKeyword: (a: string) => void
+}
+
 export type Data = {
   sickCd: string,
   sickNm: string,

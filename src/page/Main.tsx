@@ -21,7 +21,9 @@ export default function Main(): React.ReactElement {
         handleChange={handleChange}
         handleFocus={handleFocus}
       />
-      {isRecomend && <Recommend keyword={keyword} />}
+      {isRecomend && <Recommend
+        setKeyword={setKeyword}
+        keyword={keyword} />}
     </main>
   );
 }
