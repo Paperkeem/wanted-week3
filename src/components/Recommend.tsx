@@ -17,7 +17,7 @@ export default function Recommend({ keyword, setKeyword }: RProps) {
   
   return (
     <ul
-      className='bg-white rounded-2xl p-10 grid gap-5 text-lg h-96 overflow-y-scroll'>
+      className='bg-white rounded-2xl p-10 grid gap-5 text-lg'>
       <span className='text-md text-gray-400'>추천 검색어</span>
       {(keyItem?.length !== 0 && keyItem)
         ? keyItem.map((data, idx) => ( <RecoList
@@ -28,7 +28,7 @@ export default function Recommend({ keyword, setKeyword }: RProps) {
           setKeyword={setKeyword}
         />
         ))
-        : <span className='-mt-32'>검색어가 존재하지 않습니다</span>
+        : <span className='-mt-3'>검색어가 존재하지 않습니다</span>
       }
     </ul>
   );

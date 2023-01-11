@@ -10,8 +10,6 @@ export default function RecoList({ data: {sickCd, sickNm}, keyword, isFocus, set
       <span className='font-extrabold text-blue-900'>{keyword}</span>
       {sickNm.split(keyword)[1]}
     </li>
-  ) : (
-    <li>일치하는 결과가 없습니다.</li>  
-  );
+  ) : null ;
 }
 
