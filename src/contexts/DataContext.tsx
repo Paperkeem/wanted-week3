@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import axios from 'axios';
 import { Data, Datas } from '../types/type';
 import JsonApi from '../api/api';
 
