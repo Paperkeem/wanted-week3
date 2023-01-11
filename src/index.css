@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  @apply bg-blue-50 flex flex-col justify-between w-10/12 items-center m-auto
+  @apply bg-blue-50 flex flex-col w-9/12 m-auto mt-32 
 }
 
 code {
