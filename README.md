@@ -3,7 +3,12 @@
 ## [팀 레포 바로가기](https://github.com/wanted-onboarding8-6/pre-onboarding-8th-3week-6)
 
 ## 📌 구현
+
+<div align="center">
+<div style="width:490px; overflow: hidden;">
 <img width="500px" src="https://user-images.githubusercontent.com/107424974/214624515-5d786d20-e106-4726-a9a5-b17d12f403f5.gif"/>
+</div>
+</div>
 
 #### 🗓 일정 : 2023.01.10 - 01.13
 
