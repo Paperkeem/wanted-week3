@@ -6,7 +6,7 @@
 
 <div align="center">
  <div style="width:480px; overflow-x: hidden;">
-  <img width="105%" src="https://user-images.githubusercontent.com/107424974/214624515-5d786d20-e106-4726-a9a5-b17d12f403f5.gif"/>
+  <img width="500px" src="https://user-images.githubusercontent.com/107424974/214624515-5d786d20-e106-4726-a9a5-b17d12f403f5.gif"/>
  </div>
 
 #### 🗓 일정 : 2023.01.10 - 01.13
